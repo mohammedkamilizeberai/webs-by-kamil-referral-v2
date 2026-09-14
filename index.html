@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Webs By Kamil | Referral Program</title>
+  <meta name="description" content="Earn by referring businesses that need a professional website to Webs By Kamil. Register as a referrer, get your link, and track your referrals." />
+  <link rel="canonical" href="https://mohammedkamilizeberai.github.io/webs-by-kamil-referral-v2/" />
+
+  <meta property="og:title" content="Webs By Kamil | Referral Program" />
+  <meta property="og:description" content="Earn by referring businesses that need a professional website to Webs By Kamil." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+
+  <meta name="theme-color" content="#0a0b0d" />
+  <link rel="icon" href="data:," />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===========================================================
+       Webs By Kamil — Referral Platform Landing Page
+       Design: Modern / Luxury / Minimal / Corporate / Bold / Elegant
+    =========================================================== */
+
+    :root {
+      --bg: #0a0b0d;
+      --surface: #131518;
+      --surface-2: #1a1d22;
+      --text: #f2f3f5;
+      --text-secondary: #9aa1ab;
+      --accent: #5c85ea;
+      --accent-strong: #3a5fc7;
+      --accent-strong-hover: #2f4da3;
+      --accent-soft: rgba(92, 133, 234, 0.12);
+      --gold: #c9a94f;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-strong: rgba(255, 255, 255, 0.16);
+      --radius-sm: 6px;
+      --radius: 10px;
+      --radius-lg: 16px;
+      --shadow: 0 30px 70px -24px rgba(0, 0, 0, 0.65);
+      --transition: 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      --font-display: "Fraunces", Georgia, serif;
+      --font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --container: 1200px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: absolute; left: -999px; top: 0;
+      background: var(--surface); color: var(--text);
+      padding: 12px 20px; z-index: 1000; border-radius: var(--radius-sm);
+    }
+    .skip-link:focus { left: 16px; top: 16px; }
+
+    .section-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    .section { padding: 100px 0; }
+    .section-alt { background: var(--surface); }
+    .section-heading { max-width: 640px; margin: 0 auto 50px; text-align: center; }
+    .section-heading h2 { font-size: clamp(1.8rem, 3.6vw, 2.5rem); }
+    .section-heading p { color: var(--text-secondary); margin-top: 12px; }
+
+    @media (max-width: 900px) { .section { padding: 70px 0; } }
+    @media (max-width: 600px) { .container { padding: 0 20px; } .section { padding: 56px 0; } }
+
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s var(--transition), transform 0.8s var(--transition); }
+    .reveal.is-visible { opacity: 1; transform: none; }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      padding: 15px 30px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid transparent;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .btn-primary { background: var(--accent-strong); color: #fff; }
+    .btn-primary:hover { background: var(--accent-strong-hover); transform: translateY(-2px); }
+    .btn-secondary { background: transparent; color: var(--text); border-color: var(--border-strong); }
+    .btn-secondary:hover { background: rgba(255,255,255,0.06); transform: translateY(-2px); }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 900;
+      background: rgba(10, 11, 13, 0.85);
+      backdrop-filter: blur(14px) saturate(1.2);
+      border-bottom: 1px solid transparent;
+      padding: 18px 0;
+      transition: var(--transition);
+    }
+    .navbar.scrolled { border-bottom-color: var(--border); }
+    .navbar .container { display: flex; align-items: center; justify-content: space-between; }
+
+    .logo { font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; }
+    .logo span { color: var(--gold); }
+
+    .nav-links { display: flex; align-items: center; gap: 34px; }
+    .nav-links a { font-size: 0.86rem; font-weight: 600; padding: 6px 0; position: relative; }
+    .nav-links a:not(.nav-cta)::after {
+      content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 1.5px;
+      background: var(--gold); transition: var(--transition);
+    }
+    .nav-links a:not(.nav-cta):hover::after { width: 100%; }
+    .nav-cta { background: var(--accent-strong); color: #fff !important; padding: 11px 22px; border-radius: var(--radius-sm); font-size: 0.8rem !important; transition: var(--transition); }
+    .nav-cta:hover { background: var(--accent-strong-hover); }
+
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px; background: none; border: none;
+      cursor: pointer; padding: 8px; z-index: 950;
+    }
+    .hamburger span { width: 24px; height: 2px; background: var(--text); transition: var(--transition); }
+    .hamburger.active span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    @media (max-width: 900px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        position: fixed; top: 0; right: -100%; height: 100vh; width: min(80vw, 340px);
+        background: var(--surface); flex-direction: column; justify-content: center; align-items: flex-start;
+        gap: 28px; padding: 0 44px; transition: right 0.5s var(--transition);
+        box-shadow: -20px 0 50px -20px rgba(0,0,0,0.5); border-left: 1px solid var(--border);
+      }
+      .nav-links.open { right: 0; }
+    }
+
+    /* ===== HERO ===== */
+    .hero { padding: 150px 0 100px; }
+    .hero .container { text-align: center; max-width: 760px; }
+    .hero .label { font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 22px; display: inline-block; }
+    .hero h1 { font-size: clamp(2.3rem, 5vw, 3.6rem); margin-bottom: 22px; }
+    .hero p { color: var(--text-secondary); font-size: 1.1rem; max-width: 620px; margin: 0 auto 36px; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+
+    .hero-fade-in { animation: heroFade 0.9s cubic-bezier(0.22,1,0.36,1) both; }
+    .hero-fade-in.delay-1 { animation-delay: 0.1s; }
+    .hero-fade-in.delay-2 { animation-delay: 0.2s; }
+    .hero-fade-in.delay-3 { animation-delay: 0.3s; }
+    @keyframes heroFade { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .hero-fade-in { animation: none; opacity: 1; transform: none; } }
+
+    @media (max-width: 600px) { .hero { padding: 130px 0 70px; } }
+
+    /* ===== HOW IT WORKS ===== */
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+    .process-step { text-align: center; padding: 0 8px; }
+    .process-step .num {
+      width: 52px; height: 52px; border-radius: 50%; border: 1px solid var(--border-strong);
+      display: flex; align-items: center; justify-content: center; margin: 0 auto 18px;
+      font-family: var(--font-display); color: var(--gold); font-size: 1.2rem;
+    }
+    .process-step h4 { font-size: 1.02rem; margin-bottom: 8px; }
+    .process-step p { color: var(--text-secondary); font-size: 0.9rem; }
+
+    @media (max-width: 900px) { .process-grid { grid-template-columns: repeat(2, 1fr); row-gap: 40px; } }
+    @media (max-width: 520px) { .process-grid { grid-template-columns: 1fr; } }
+
+    /* ===== PACKAGES ===== */
+    .package-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .package-card {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg);
+      padding: 40px 32px; text-align: center; transition: var(--transition);
+    }
+    .package-card:hover { transform: translateY(-6px); border-color: var(--border-strong); box-shadow: var(--shadow); }
+    .package-card h3 { font-size: 1.3rem; margin-bottom: 14px; }
+    .package-price { display: block; font-family: var(--font-display); font-size: 2rem; color: var(--gold); margin-bottom: 16px; }
+    .package-card p { color: var(--text-secondary); font-size: 0.92rem; }
+
+    @media (max-width: 860px) { .package-grid { grid-template-columns: 1fr; } }
+
+    /* ===== WHY BECOME A REFERRER ===== */
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+    .why-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 32px 28px;
+    }
+    .why-card h4 { font-size: 1rem; margin-bottom: 10px; }
+    .why-card p { color: var(--text-secondary); font-size: 0.9rem; }
+
+    @media (max-width: 860px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .why-grid { grid-template-columns: 1fr; } }
+
+    /* ===== CTA ===== */
+    .cta-section { text-align: center; }
+    .cta-inner h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin-bottom: 16px; }
+    .cta-inner p { color: var(--text-secondary); max-width: 520px; margin: 0 auto 30px; }
+
+    /* ===== FOOTER ===== */
+    .site-footer { border-top: 1px solid var(--border); padding: 60px 0 28px; }
+    .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; padding-bottom: 30px; }
+    .footer-tagline { color: var(--text-secondary); font-size: 0.9rem; margin-top: 12px; max-width: 300px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
+    .footer-links a { color: var(--text-secondary); font-size: 0.88rem; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid var(--border); padding-top: 22px; display: flex;
+      justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 0.82rem; color: var(--text-secondary);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="#hero" class="logo">WEBS BY <span>KAMIL</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html" class="nav-cta">Become a Referrer</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <span class="label hero-fade-in">Webs By Kamil Referral Program</span>
+        <h1 class="hero-fade-in delay-1">Earn By Connecting Businesses With Webs By Kamil</h1>
+        <p class="hero-fade-in delay-2">
+          Know a business without a professional website? Register as a referrer, get your
+          own referral link, and refer them to Webs By Kamil. Track every referral you make
+          from your own dashboard.
+        </p>
+        <div class="hero-actions hero-fade-in delay-3">
+          <a href="register.html" class="btn btn-primary">Become a Referrer</a>
+          <a href="login.html" class="btn btn-secondary">Login</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section id="how-it-works" class="section section-alt">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-label">How It Works</span>
+          <h2>A Simple Referral Process</h2>
+          <p>From registering to tracking your referral — here's how it works.</p>
+        </div>
+        <div class="process-grid reveal">
+          <div class="process-step">
+            <div class="num">01</div>
+            <h4>Register</h4>
+            <p>Create your referrer account in a few minutes.</p>
+          </div>
+          <div class="process-step">
+            <div class="num">02</div>
+            <h4>Get Your Referral Link</h4>
+            <p>Receive a unique referral link tied to your account.</p>
+          </div>
+          <div class="process-step">
+            <div class="num">03</div>
+            <h4>Refer A Business</h4>
+            <p>Share your link with a business that needs a website.</p>
+          </div>
+          <div class="process-step">
+            <div class="num">04</div>
+            <h4>Track Your Referral</h4>
+            <p>Follow your referral's progress from your dashboard.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PACKAGES ===== -->
+    <section id="packages" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-label">Packages</span>
+          <h2>Webs By Kamil Website Packages</h2>
+          <p>These are the packages a business you refer can choose from.</p>
+        </div>
+        <div class="package-grid reveal">
+          <div class="package-card">
+            <h3>Basic</h3>
+            <span class="package-price">&#8358;100,000</span>
+            <p>A professional website package for small and local businesses.</p>
+          </div>
+          <div class="package-card">
+            <h3>Standard</h3>
+            <span class="package-price">&#8358;150,000</span>
+            <p>A professional website package for small and local businesses.</p>
+          </div>
+          <div class="package-card">
+            <h3>Premium</h3>
+            <span class="package-price">&#8358;200,000</span>
+            <p>A professional website package for small and local businesses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY BECOME A REFERRER ===== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-label">Why Become A Referrer</span>
+          <h2>What You Get As A Referrer</h2>
+        </div>
+        <div class="why-grid reveal">
+          <div class="why-card">
+            <h4>Simple Referral Process</h4>
+            <p>No complicated steps — register, get your link, and start referring.</p>
+          </div>
+          <div class="why-card">
+            <h4>Personal Referral Link</h4>
+            <p>A unique link tied to your account for every business you refer.</p>
+          </div>
+          <div class="why-card">
+            <h4>Referral Tracking</h4>
+            <p>See the status of every referral you've made, in one place.</p>
+          </div>
+          <div class="why-card">
+            <h4>Professional Website Service</h4>
+            <p>Refer businesses to a real website design service, Webs By Kamil.</p>
+          </div>
+          <div class="why-card">
+            <h4>Easy Dashboard Management</h4>
+            <p>Manage your referral link and referrals from a simple dashboard.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section cta-section">
+      <div class="container cta-inner reveal">
+        <h2>Ready To Start Referring?</h2>
+        <p>Register as a referrer and get your referral link right away.</p>
+        <a href="register.html" class="btn btn-primary">Become a Referrer</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo">WEBS BY <span>KAMIL</span></div>
+          <p class="footer-tagline">
+            Refer businesses that need a professional website to Webs By Kamil,
+            and track your referrals from your own dashboard.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="#hero">Home</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#packages">Packages</a>
+          <a href="login.html">Login</a>
+          <a href="register.html">Become a Referrer</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> Webs By Kamil. All Rights Reserved.</span>
+        <span>Referral program prototype.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      /* Mobile navigation */
+      var hamburger = document.getElementById("hamburger");
+      var navLinks = document.getElementById("navLinks");
+
+      function toggleMenu() {
+        var isOpen = navLinks.classList.toggle("open");
+        hamburger.classList.toggle("active", isOpen);
+        hamburger.setAttribute("aria-expanded", String(isOpen));
+        document.body.style.overflow = isOpen ? "hidden" : "";
+      }
+
+      if (hamburger && navLinks) {
+        hamburger.addEventListener("click", toggleMenu);
+        navLinks.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            if (navLinks.classList.contains("open")) toggleMenu();
+          });
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && navLinks.classList.contains("open")) toggleMenu();
+        });
+      }
+
+      /* Sticky navbar shadow on scroll */
+      var navbar = document.getElementById("navbar");
+      function handleNavScroll() {
+        navbar.classList.toggle("scrolled", window.scrollY > 12);
+      }
+      window.addEventListener("scroll", handleNavScroll, { passive: true });
+      handleNavScroll();
+
+      /* Smooth scroll for in-page anchors, with header offset */
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener("click", function (e) {
+          var targetId = this.getAttribute("href");
+          if (!targetId || targetId === "#") return;
+          var target = document.querySelector(targetId);
+          if (!target) return;
+          e.preventDefault();
+          var offset = 84;
+          var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top: top, behavior: prefersReducedMotion ? "auto" : "smooth" });
+        });
+      });
+
+      /* Restrained, one-time scroll reveal */
+      var revealEls = document.querySelectorAll(".reveal");
+      if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+        revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+      } else {
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
+        );
+        revealEls.forEach(function (el) { observer.observe(el); });
+      }
+
+      /* Footer year */
+      var yearEl = document.getElementById("year");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
